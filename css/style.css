@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: fit-content;
+    box-shadow: 0 0px 50px rgba(0, 0, 0, .2);
+}
+.left{
+    position: relative;
+    /*background-color: #1e82aa;*/
+    background-color: #003147;
+    padding: 30px;    
+}
+.profile_name{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.circle{
+    position: relative;
+    width: 200px;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+img{
+    width: 100%;
+}
+.name{
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.name h4{
+    font-size: 1.2rem;
+    margin-bottom: .2rem;
+}
+
+.box{
+    position: relative;
+    padding: .5rem;
+    margin-top: 2rem;
+}
+.title{
+    position: relative;
+    background-color: #74c1e4;
+    padding: 10px 0 10px 20px;
+    font-weight: 600;
+    color: #003147;
+    border-radius: 20px;
+    width: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 1rem;
+}
+.content .item{
+    display: flex;
+    gap: 1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.item i{
+    color: #74c1e4;
+}
+.skills{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.skills .skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.skills .skill h4{
+    z-index: 1;
+    font-size: .8rem;
+    color: #fff;
+}
+.skills .skill i{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    padding: .4rem;
+    border-radius: 30%;
+    z-index: 1;
+    background-color: #74c1e4;
+    color: #003147;
+}
+
+.right{
+    position: relative;
+    padding: 30px;
+}
+.right .title{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    background-color: #003147;
+}
+.right .item{
+    color: #003147;
+    flex-direction: row;
+}
+.right h4{
+    margin-bottom: 1rem;
+}
+.right p{
+    margin-bottom: .5rem;
+}
+.right a{
+    color: #003147;
+    text-decoration: none;
+}
+.nav{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .circle{
+        background-color: #003147;
+    }
+    .left{
+        background-color: #fff;
+    }
+    .title{
+        color: #fff;
+        background-color: #003147;
+    }
+    .left h4,
+    .left span{
+        color: #003147;
+    }
+    .skills{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .skills .skill h4{
+        color: #003147;
+    }
+    .nav{
+        display: flex;
+        justify-content: center;
+        background-color: #74c1e4;
+        padding: .5rem 0;
+        margin: 0 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #003047;
+        position: fixed;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .list{
+        width: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .list i{
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    .list a{
+        color: #003147;
+    }
+    .list i:hover{
+        background-color: #003147;
+        border-radius: 50%;
+        color: #fff;
+    }
+}
+@media screen and (max-width: 425px) {
+    
+    .skills{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
